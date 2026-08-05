@@ -17,3 +17,7 @@ module demo {
 ```
 ### Run
 ```
+terraform init
+terraform apply
+
+```
