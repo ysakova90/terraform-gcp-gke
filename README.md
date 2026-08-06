@@ -24,3 +24,8 @@ terraform init
 terraform apply
 
 ```
+
+### Outputs: 
+
+ `cluster_name`  Name of the GKE cluster.
+ `location`   Region where the GKE cluster is deployed.
