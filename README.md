@@ -19,7 +19,7 @@ module "demo" {
 }
 ```
 
-### To get output add beloww code
+### To get output add below code
 ```
 output cluster_location {
   description = "GKE cluster location"
