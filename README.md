@@ -2,13 +2,12 @@
 ### Please copy paste below code
 
 ```
-module "demo" {
+module demo {
   source  = "ysakova90/gke/gcp"
-  version = "0.0.4"
 
   gke_config = {
     cluster_name   = "project-cluster"
-    location       = "us-west-1"
+    location       = "us-west1"
     node_count     = 1
     min_node_count = 1
     max_node_count = 2
@@ -21,14 +20,14 @@ module "demo" {
 
 ### To get output add below code
 ```
-output cluster_location {
+output "cluster_location" {
   description = "GKE cluster location"
-  value       = google_container_cluster.primary.location
+  value       = module.demo.cluster_location
 }
 
 output "cluster_name" {
   description = "GKE cluster name"
-  value       = google_container_cluster.primary.name
+  value       = module.demo.cluster_name
 }
 ```
 
